@@ -11,23 +11,16 @@
 |
 */
 
+use App\Http\Controllers\AllController as AllC;
+
 Route::get('/', function () {
     return view('index');
 })->name('index');
 
 Route::get('/produtos', function () {
-    return view('produtos');
+    $products = AllC::populate();
+    return view('produtos')->with('products', $products);
 })->name('produtos');
-
-Route::get('/produto/{id}', function (){
-    $product['id'] = 1;
-    $product['name'] = "Magnum";
-    $product['price'] = "9999.99";
-    $product['details'] = "Magnum Taurus .357";
-    $product['description'] = "Revólver Taurus RT 608 Inox – .357 Magnum – 8 tiros";
-
-    return view('produto')->with('product', $product);
-});
 
 Route::get('/sobre', function () {
     return view('sobre');

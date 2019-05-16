@@ -3,13 +3,13 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Store Template</title>
+	<title>PROVOCAÇÕES LIVRARIA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 
-  <!-- Facebook and Twitter integration -->
+  	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -65,13 +65,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="{{ route('index') }}">Robson LTDA</a></div>
+							<a href="/"><img src="images/logo.png" width="140px" height="50px" alt=""></a>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li><a href="{{ route('index') }}">Home</a></li>
-								<li><a href="{{ route('produtos') }}">Produtos</a></li>
-								<li><a href="{{ route('sobre') }}">Sobre nós</a></li>
+								<li><a href="{{ route('index') }}"><strong>HOME</strong></a></li>
+								<li><a href="{{ route('produtos') }}"><strong>LIVROS</strong></a></li>
+								<li><a href="{{ route('sobre') }}"><strong>SOBRE NÓS</strong></a></li>
 							</ul>
 						</div>
 					</div>
@@ -87,8 +87,8 @@
 					<div class="col-md-12 text-center">
 						<p>
 							<span class="block"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
 							<span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
 						</p>
 					</div>
