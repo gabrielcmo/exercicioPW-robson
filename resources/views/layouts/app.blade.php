@@ -53,6 +53,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 	</head>
 	<body>
@@ -72,6 +73,12 @@
 								<li><a href="{{ route('index') }}"><strong>HOME</strong></a></li>
 								<li><a href="{{ route('produtos') }}"><strong>LIVROS</strong></a></li>
 								<li><a href="{{ route('sobre') }}"><strong>SOBRE NÓS</strong></a></li>
+								@auth
+									<li><a href="/home"><strong><i class="fas fa-user">{{ Auth::guard()->user()->name }}</i></strong></a></li>
+								@else
+									<li><a href="/login">Logar</a></li>
+									<li><a href="/register">Registrar</a></li>
+								@endif
 							</ul>
 						</div>
 					</div>

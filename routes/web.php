@@ -17,11 +17,19 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/produtos', function () {
-    $products = AllC::populate();
-    return view('produtos')->with('products', $products);
-})->name('produtos');
+Route::get('/produtos', 'LivroController@index')->name('produtos');
 
+Route::group(['middleware' => ['admin']], function (){
+    Route::get('/produto/create', 'LivroController@formAdd')->name('create');
+    Route::post('/produto/add', 'LivroController@add');
+
+    Route::get('/produto/remove', 'LivroController@formRemove')->name('remove');
+    Route::post('/produto/remove/post', 'LivroController@delete');
+});
 Route::get('/sobre', function () {
     return view('sobre');
 })->name('sobre');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
